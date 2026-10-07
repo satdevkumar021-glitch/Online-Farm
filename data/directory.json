@@ -1,0 +1,64 @@
+{
+  "officers": [
+    {
+      "id": "off_01_hdo_abohar",
+      "name": "Dr. Balwinder Singh Brar",
+      "role_en": "Horticulture Development Officer (HDO)",
+      "role_pa": "ਬਾਗ਼ਬਾਨੀ ਵਿਕਾਸ ਅਫ਼ਸਰ (HDO)",
+      "role_hi": "उद्यानिकी विकास अधिकारी (HDO)",
+      "office_location": "Tehsil Complex, Near Old Grain Market, Abohar",
+      "phone": "+919814233211",
+      "visiting_hours": "Mon, Wed, Fri (9:00 AM - 1:30 PM)",
+      "jurisdiction": "Abohar & Khuian Sarwar Blocks",
+      "verified_date": "2026-10-04",
+      "helps_with_pa": "ਕਿੰਨੂ ਦੀਆਂ ਬਿਮਾਰੀਆਂ ਦੀ ਜਾਂਚ, ਡਰਿੱਪ ਸਿੰਚਾਈ ਸਬਸਿਡੀ ਵੈਰੀਫਿਕੇਸ਼ਨ, ਨਰਸਰੀ ਬੂਟਿਆਂ ਦੀ ਤਸਦੀਕ।",
+      "helps_with_hi": "किन्नू फल रोगों की जांच, ड्रिप सब्सिडी सत्यापन, उन्नत पौध वितरण।",
+      "documents_to_carry": ["Jamabandi (Fard)", "Soil Test Card", "Aadhaar Card copy"]
+    },
+    {
+      "id": "off_02_ado_balluana",
+      "name": "S. Gurpreet Singh Sandhu",
+      "role_en": "Agriculture Development Officer (ADO)",
+      "role_pa": "ਖੇਤੀਬਾੜੀ ਵਿਕਾਸ ਅਫ਼ਸਰ (ADO)",
+      "role_hi": "कृषि विकास अधिकारी (ADO)",
+      "office_location": "Block Agriculture Office, Balluana Village Center",
+      "phone": "+919872144566",
+      "visiting_hours": "Tue, Thu (10:00 AM - 2:00 PM)",
+      "jurisdiction": "Balluana Block, Fazilka",
+      "verified_date": "2026-10-02",
+      "helps_with_pa": "ਫ਼ਸਲੀ ਵਿਭਿੰਨਤਾ ਸਕੀਮ ਫ਼ਾਰਮ, ਖਾਦ ਸਬਸਿਡੀ, ਨਰਮਾ/ਕਣਕ ਕੀਟ ਰੋਕਥਾਮ ਕੈਂਪ।",
+      "helps_with_hi": "फसल विविधीकरण योजना, उर्वरक आवंटन, कीट प्रबंधन शिविर।",
+      "documents_to_carry": ["Khasra Girdawari", "Bank Passbook"]
+    },
+    {
+      "id": "off_03_kvk_scientist",
+      "name": "Dr. P. K. Arora",
+      "role_en": "Senior Entomologist / Plant Doctor, KVK",
+      "role_pa": "ਸੀਨੀਅਰ ਵਿਗਿਆਨੀ (ਪੌਦਾ ਸੁਰੱਖਿਆ), ਕੇ.ਵੀ.ਕੇ. ਅਬੋਹਰ",
+      "role_hi": "वरिष्ठ पादप सुरक्षा वैज्ञानिक, केवीके अबोहर",
+      "office_location": "PAU Regional Fruit Research Station & KVK, Abohar",
+      "phone": "+911634222450",
+      "visiting_hours": "All Working Days (9:00 AM - 5:00 PM)",
+      "jurisdiction": "Fazilka & Sri Muktsar Sahib Districts",
+      "verified_date": "2026-10-05",
+      "helps_with_pa": "ਕਿੰਨੂ ਦੇ ਕੇਰੇ (Fruit Drop) ਅਤੇ ਫਲ ਮੱਖੀ ਦੀ ਲੈਬ ਜਾਂਚ, ਮੁਫ਼ਤ ਕੀਟਨਾਸ਼ਕ ਸਲਾਹ।",
+      "helps_with_hi": "किन्नू फल सड़न/मक्खी लैब जांच, रोग पहचान एवं वैज्ञानिक सलाह।",
+      "documents_to_carry": ["2 to 4 Freshly affected leaves/fruits in clean paper bag"]
+    },
+    {
+      "id": "off_04_kcc_helpline",
+      "name": "Kisan Call Centre (Govt of India)",
+      "role_en": "National Farmer Toll-Free Helpline",
+      "role_pa": "ਕਿਸਾਨ ਕਾਲ ਸੈਂਟਰ (ਟੋਲ ਫ਼੍ਰੀ ਹੈਲਪਲਾਈਨ)",
+      "role_hi": "किसान कॉल सेंटर (टोल-फ्री नंबर)",
+      "office_location": "National Routing Desk",
+      "phone": "1800-180-1551",
+      "visiting_hours": "6:00 AM - 10:00 PM (Everyday)",
+      "jurisdiction": "All India (Local Language Support)",
+      "verified_date": "2026-10-01",
+      "helps_with_pa": "ਮੌਸਮ, ਫ਼ਸਲ ਰੋਗ, ਮੰਡੀ ਭਾਅ ਅਤੇ ਸਰਕਾਰੀ ਸਕੀਮਾਂ ਦੀ ਤਤਕਾਲ ਮੁਫ਼ਤ ਜਾਣਕਾਰੀ।",
+      "helps_with_hi": "मौसम, कीट रोग, मंडी भाव और योजनाओं की तत्काल मुफ्त टेलीफोनिक सलाह।",
+      "documents_to_carry": ["No documents required - direct phone call"]
+    }
+  ]
+}

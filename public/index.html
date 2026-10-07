@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ਕਿਸਾਨ ਸਾਥੀ (Kisan Sathi) - Farm Manage System</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- TOP HEADER -->
+  <header class="app-header">
+    <div class="brand-title">
+      <span>🌾 ਕਿਸਾਨ ਸਾਥੀ</span>
+      <span class="brand-badge">ਅਬੋਹਰ</span>
+    </div>
+    <div class="header-actions">
+      <button id="userProfileBtn" class="lang-btn" style="background:#E8F5E9; border-color:var(--mitti-green-700); color:var(--mitti-green-700);" onclick="openProfileModal()">
+        👤 <span id="headerUserName">ਹਰਪ੍ਰੀਤ ਸਿੰਘ</span>
+      </button>
+      <select id="langSelect" class="lang-btn">
+        <option value="pa">ਪੰਜਾਬੀ</option>
+        <option value="hi">हिन्दी</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- MAIN SCROLLABLE VIEW -->
+  <main class="main-content" id="tabContent">
+    <!-- Rendered dynamically by app.js -->
+  </main>
+
+  <!-- FLOATING OMNI-MIC FAB -->
+  <button id="omniMicBtn" class="omni-mic-fab" title="ਬੋਲ ਕੇ ਪੁੱਛੋ ਜਾਂ ਦਰਜ ਕਰੋ">
+    <span style="font-size: 28px;">🎙️</span>
+  </button>
+
+  <!-- BOTTOM NAVIGATION (5 TABS) -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-tab="today">
+      <span class="nav-icon" style="font-size: 20px;">📅</span>
+      <span id="navTodayText">ਅੱਜ ਦਾ ਕੰਮ</span>
+    </button>
+    <button class="nav-item" data-tab="farm">
+      <span class="nav-icon" style="font-size: 20px;">🌳</span>
+      <span id="navFarmText">ਮੇਰਾ ਖੇਤ</span>
+    </button>
+    <button class="nav-item" data-tab="help">
+      <span class="nav-icon" style="font-size: 20px;">📷</span>
+      <span id="navHelpText">ਸਮੱਸਿਆ / ਇਲਾਜ</span>
+    </button>
+    <button class="nav-item" data-tab="schemes">
+      <span class="nav-icon" style="font-size: 20px;">🏛️</span>
+      <span id="navSchemesText">ਯੋਜਨਾਵਾਂ</span>
+    </button>
+    <button class="nav-item" data-tab="more">
+      <span class="nav-icon" style="font-size: 20px;">⚙️</span>
+      <span id="navMoreText">ਹੋਰ</span>
+    </button>
+  </nav>
+
+</div>
+
+<!-- ========================================================================= -->
+<!-- MODALS                                                                    -->
+<!-- ========================================================================= -->
+
+<!-- 1. ACTIVITY LOGGER MODAL -->
+<div id="activityModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">+ ਖੇਤ ਦਾ ਕੰਮ ਦਰਜ ਕਰੋ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form onsubmit="submitActivityForm(event)">
+      <div class="form-group">
+        <label class="form-label">ਕੰਮ ਦੀ ਕਿਸਮ</label>
+        <select id="actType" class="form-input">
+          <option value="SPRAY">ਸਪਰੇਅ (Spray)</option>
+          <option value="IRRIGATION">ਸਿੰਚਾਈ (Irrigation / Paani)</option>
+          <option value="FERTILIZER">ਖਾਦ (Fertilizer / Roodi)</option>
+          <option value="PRUNING">ਛਾਂਗਾਈ (Pruning / Katai)</option>
+          <option value="LABOR">ਮਜ਼ਦੂਰੀ (Labor)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਦਵਾਈ ਜਾਂ ਕੰਮ ਦਾ ਵੇਰਵਾ</label>
+        <input type="text" id="actDetails" class="form-input" placeholder="ਜਿਵੇਂ: ਟਿਲਟ (Tilt 25 EC) 200ml" required>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div class="form-group">
+          <label class="form-label">ਮਾਤਰਾ (ਡਰੱਮ/ਘੰਟੇ/ਕਿਲੋ)</label>
+          <input type="number" id="actQty" class="form-input" value="2" step="0.5" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">ਖ਼ਰਚਾ (₹ ਰੁਪਏ)</label>
+          <input type="number" id="actCost" class="form-input" value="480">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਤੁੜਾਈ ਰੋਕ ਲਾਕ (PHI Days)</label>
+        <input type="number" id="actPhi" class="form-input" value="30">
+        <div style="font-size: 11px; color: var(--mitti-earth-700); margin-top: 2px;">
+          ਟਿਲਟ ਸਪਰੇਅ ਮਗਰੋਂ 30 ਦਿਨਾਂ ਤੱਕ ਕਿੰਨੂ ਨਹੀਂ ਤੋੜਨਾ।
+        </div>
+      </div>
+      <button type="submit" class="mitti-btn primary full-width">ਦਰਜ ਕਰੋ (Save Activity)</button>
+    </form>
+  </div>
+</div>
+
+<!-- 2. CHEMICAL CONTAINER SCANNER MODAL -->
+<div id="scanModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">🧪 ਦਵਾਈ ਦੀ ਬੋਤਲ ਜਾਂ ਪਰਚੀ ਚੈੱਕ ਕਰੋ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <div style="display:flex; gap:8px; margin-bottom:12px;">
+      <input type="text" id="scanInput" class="form-input" placeholder="ਦਵਾਈ ਦਾ ਨਾਮ (ਜਿਵੇਂ: Tilt, Decis, Monocrotophos)...">
+      <button class="mitti-btn primary" style="min-height:48px;" onclick="runChemicalScan()">ਜਾਂਚੋ</button>
+    </div>
+    <div id="scanResult">
+      <!-- Result output rendered by app.js -->
+    </div>
+  </div>
+</div>
+
+<!-- 3. ASSISTANT QUERY MODAL -->
+<div id="assistantModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">🌾 ਕਿਸਾਨ ਸਾਥੀ ਸਹਾਇਕ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <div id="assistantModalBody"></div>
+  </div>
+</div>
+
+<!-- 4. OFFICERS DIRECTORY MODAL -->
+<div id="officerModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">👨‍🌾 ਸਰਕਾਰੀ ਅਫ਼ਸਰ ਤੇ ਵਿਗਿਆਨੀ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <div id="officerModalBody"></div>
+  </div>
+</div>
+
+<!-- 5. LEDGER ADD ENTRY MODAL -->
+<div id="ledgerAddModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">+ ਖ਼ਰਚਾ ਜਾਂ ਕਮਾਈ ਦਰਜ ਕਰੋ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form onsubmit="submitLedgerForm(event)">
+      <div class="form-group">
+        <label class="form-label">ਕਿਸਮ</label>
+        <select id="ledType" class="form-input">
+          <option value="EXPENSE">ਖ਼ਰਚਾ (Expense)</option>
+          <option value="INCOME">ਕਮਾਈ (Income)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਵੇਰਵਾ</label>
+        <input type="text" id="ledDesc" class="form-input" placeholder="ਜਿਵੇਂ: ਡੀਜ਼ਲ, ਨਹਿਰੀ ਖ਼ਰਚਾ, ਤੁੜਾਈ ਮਜ਼ਦੂਰੀ" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਰਕਮ (₹)</label>
+        <input type="number" id="ledAmount" class="form-input" placeholder="500" required>
+      </div>
+      <button type="submit" class="mitti-btn primary full-width">ਖ਼ਾਤੇ ਵਿੱਚ ਜੋੜੋ</button>
+    </form>
+  </div>
+</div>
+
+<!-- 6. CURATION WORKBENCH MODAL (F22) -->
+<div id="curationModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">⚙️ ਐਡਮਿਨ / ਵਿਗਿਆਨੀ ਕੰਸੋਲ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form onsubmit="publishCuratedAlert(event)">
+      <div class="form-group">
+        <label class="form-label">ਚੇਤਾਵਨੀ ਸਿਰਲੇਖ (ਪੰਜਾਬੀ)</label>
+        <input type="text" id="alertTitlePa" class="form-input" value="ਅਬੋਹਰ ਬਲਾਕ ਵਿੱਚ ਚਿੱਟੀ ਮੱਖੀ ਦਾ ਹਮਲਾ" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਸਿਫ਼ਾਰਸ਼ੀ ਕਦਮ</label>
+        <textarea id="alertActionPa" class="form-input" style="height:80px;" required>ਨਿੰਮ ਦੇ ਤੇਲ (Neem Oil 1500 ppm) ਦਾ ਛਿੜਕਾਅ ਕਰੋ। ਬਿਨਾਂ ਲੋੜ ਤੋਂ ਸਿੰਥੈਟਿਕ ਸਪਰੇਅ ਨਾ ਕਰੋ।</textarea>
+      </div>
+      <button type="submit" class="mitti-btn primary full-width">ਦਸਤਖ਼ਤ ਕਰਕੇ ਜਾਰੀ ਕਰੋ (Sign & Publish)</button>
+    </form>
+  </div>
+</div>
+
+<!-- 7. AUTH & OTP LOGIN MODAL (F1) -->
+<div id="authModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title" id="authModalTitle">🌾 ਕਿਸਾਨ ਲੌਗਇਨ / ਰਜਿਸਟ੍ਰੇਸ਼ਨ</div>
+      <button class="close-btn" onclick="closeAuthModal()">&times;</button>
+    </div>
+    
+    <div style="background:#E8F5E9; padding:12px; border-radius:8px; border:1px solid #C8E6C9; margin-bottom:14px;">
+      <div style="font-size:14px; font-weight:700; color:var(--mitti-green-700);">
+        ਆਪਣੇ 10-ਅੰਕਾਂ ਵਾਲੇ ਮੋਬਾਈਲ ਨੰਬਰ ਨਾਲ ਲੌਗਇਨ ਕਰੋ।
+      </div>
+      <div style="font-size:12px; color:var(--mitti-earth-700); margin-top:2px;">
+        ਟੈਸਟ ਕਰਨ ਲਈ ਡੈਮੋ OTP ਕੋਡ <strong>4921</strong> ਵਰਤੋ।
+      </div>
+    </div>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+      <!-- Step A: Phone Number -->
+      <div class="form-group" id="phoneStep">
+        <label class="form-label">ਮੋਬਾਈਲ ਨੰਬਰ (Mobile Number)</label>
+        <div style="display:flex; gap:8px;">
+          <span style="display:flex; align-items:center; padding:0 12px; background:#EFEFE9; border:2px solid var(--mitti-card-border); border-radius:8px; font-weight:700;">+91</span>
+          <input type="tel" id="authPhone" class="form-input" placeholder="98765-43210" value="9876543210" maxlength="10" required>
+        </div>
+      </div>
+
+      <!-- Assisted Mode Switch -->
+      <div style="margin-bottom:14px; display:flex; align-items:center; gap:8px;">
+        <input type="checkbox" id="authKrishiMitra" style="width:20px; height:20px; accent-color:var(--mitti-green-700);">
+        <label for="authKrishiMitra" style="font-size:13px; font-weight:700; cursor:pointer;">
+          ਮੈਂ ਕ੍ਰਿਸ਼ੀ ਮਿੱਤਰ / ਕਿਓਸਕ ਆਪਰੇਟਰ ਹਾਂ (Assisted Mode)
+        </label>
+      </div>
+
+      <!-- Step B: OTP Input -->
+      <div class="form-group" id="otpGroup" style="display:none;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <label class="form-label">ਓ.ਟੀ.ਪੀ. ਕੋਡ (Enter OTP)</label>
+          <span style="font-size:12px; color:var(--mitti-green-700); font-weight:700;">ਕੋਡ ਭੇਜਿਆ ਗਿਆ!</span>
+        </div>
+        <input type="text" id="authOtp" class="form-input" placeholder="4921" value="4921" maxlength="6">
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
+        <button type="button" id="sendOtpBtn" class="mitti-btn secondary full-width" onclick="requestOtp()">
+          📲 ਓ.ਟੀ.ਪੀ. ਭੇਜੋ (Send OTP)
+        </button>
+        <button type="submit" id="verifyOtpBtn" class="mitti-btn primary full-width" style="display:none;">
+          ✓ ਪੁਸ਼ਟੀ ਕਰੋ ਅਤੇ ਅੱਗੇ ਵਧੋ (Verify & Login)
+        </button>
+      </div>
+
+      <!-- Quick One-Tap Demo Login Button -->
+      <div style="margin-top:16px; padding-top:12px; border-top:1px dashed #D6D8D2; text-align:center;">
+        <button type="button" class="mitti-btn secondary full-width" style="background:#FFFFFF; font-size:13px; min-height:42px;" onclick="instantDemoLogin()">
+          ⚡ 1-ਟੈਪ ਡੈਮੋ ਲੌਗਇਨ (ਹਰਪ੍ਰੀਤ ਸਿੰਘ, ਅਬੋਹਰ)
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 8. USER PROFILE & ACCOUNT MODAL -->
+<div id="profileModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">👤 ਕਿਸਾਨ ਪ੍ਰੋਫ਼ਾਈਲ ਤੇ ਖਾਤਾ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <div id="profileModalContent"></div>
+  </div>
+</div>
+
+<!-- 9. ADD PLOT MODAL (F2) -->
+<div id="addPlotModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">+ ਨਵਾਂ ਪਲਾਟ ਜੋੜੋ (Add Plot)</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form onsubmit="submitNewPlotForm(event)">
+      <div class="form-group">
+        <label class="form-label">ਪਲਾਟ ਦਾ ਨਾਮ (Plot Name)</label>
+        <input type="text" id="plotNameInput" class="form-input" placeholder="ਜਿਵੇਂ: ਢਾਣੀ ਵਾਲਾ ਪਲਾਟ / Plot 3" required>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <div class="form-group">
+          <label class="form-label">ਰਕਬਾ (ਕਿੱਲੇ / ਏਕੜ)</label>
+          <input type="number" id="plotAreaInput" class="form-input" value="1.5" step="0.5" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">ਮੁੱਖ ਫ਼ਸਲ</label>
+          <select id="plotCropInput" class="form-input">
+            <option value="KINNOW_MANDARIN">ਕਿੰਨੂ ਬਾਗ਼ (Kinnow)</option>
+            <option value="GUAVA">ਅਮਰੂਦ (Guava)</option>
+            <option value="WHEAT">ਕਣਕ (Wheat)</option>
+            <option value="VEGETABLES">ਸਬਜ਼ੀਆਂ (Vegetables)</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <div class="form-group">
+          <label class="form-label">ਮਿੱਟੀ ਦੀ ਕਿਸਮ</label>
+          <select id="plotSoilInput" class="form-input">
+            <option value="Sandy Loam">ਰੇਤਲੀ ਮਹਿਰਾ (Sandy Loam)</option>
+            <option value="Loam">ਮਹਿਰਾ (Loam)</option>
+            <option value="Clay">ਡਾਕਰ / ਚੀਕਣੀ (Clay)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">ਪਾਣੀ ਦਾ ਸਾਧਨ</label>
+          <select id="plotWaterInput" class="form-input">
+            <option value="Canal + Tubewell">ਨਹਿਰੀ + ਟਿਊਬਵੈੱਲ</option>
+            <option value="Canal Only">ਸਿਰਫ਼ ਨਹਿਰੀ</option>
+            <option value="Tubewell Only">ਸਿਰਫ਼ ਟਿਊਬਵੈੱਲ</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="mitti-btn primary full-width">ਪਲਾਟ ਸੁਰੱਖਿਅਤ ਕਰੋ (Save Plot)</button>
+    </form>
+  </div>
+</div>
+
+<!-- 10. RICH DETAIL MODAL (Suitability & Alternatives) -->
+<div id="detailModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title" id="detailModalTitle">ਵਿਸਥਾਰਪੂਰਵਕ ਰਿਪੋਰਟ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <div id="detailModalBody"></div>
+  </div>
+</div>
+
+<!-- 11. SCHEME ASSISTED APPLICATION MODAL (F14) -->
+<div id="schemeApplyModal" class="modal-overlay">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <div class="modal-title">🏛️ ਸਬਸਿਡੀ ਅਰਜ਼ੀ ਫ਼ਾਰਮ</div>
+      <button class="close-btn">&times;</button>
+    </div>
+    <form onsubmit="submitSchemeApplication(event)">
+      <input type="hidden" id="applySchemeId">
+      <div style="background:#E8F5E9; padding:12px; border-radius:8px; border:1px solid #C8E6C9; margin-bottom:14px;">
+        <div id="applySchemeTitle" style="font-weight:800; font-size:16px; color:var(--mitti-green-700);"></div>
+        <div id="applySchemeBenefit" style="font-size:13px; font-weight:700; margin-top:2px;"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਕਿਸਾਨ ਦਾ ਨਾਮ (Applicant Name)</label>
+        <input type="text" id="applyFarmerName" class="form-input" value="Harpreet Singh" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਮੋਬਾਈਲ ਨੰਬਰ</label>
+        <input type="tel" id="applyFarmerPhone" class="form-input" value="+919876543210" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">ਲੋੜੀਂਦੇ ਦਸਤਾਵੇਜ਼ ਚੁਣੋ (Check Available Documents):</label>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-top:6px;">
+          <label style="display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700;">
+            <input type="checkbox" id="docJamabandi" checked style="width:18px; height:18px; accent-color:var(--mitti-green-700);">
+            ਜ਼ਮੀਨ ਦੀ ਫ਼ਰਦ / ਜਮ੍ਹਾਬੰਦੀ (Jamabandi copy)
+          </label>
+          <label style="display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700;">
+            <input type="checkbox" id="docAadhaar" checked style="width:18px; height:18px; accent-color:var(--mitti-green-700);">
+            ਆਧਾਰ ਕਾਰਡ ਕਾਪੀ (Aadhaar Card)
+          </label>
+          <label style="display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700;">
+            <input type="checkbox" id="docPassbook" checked style="width:18px; height:18px; accent-color:var(--mitti-green-700);">
+            ਬੈਂਕ ਪਾਸਬੁੱਕ / ਖਾਤਾ ਨੰਬਰ (Bank Passbook)
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="mitti-btn primary full-width">ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਕਰੋ (Submit Application)</button>
+    </form>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div id="toastNotification" class="toast-notification">
+  <span id="toastIcon">✓</span>
+  <span id="toastMessage">ਸਫ਼ਲਤਾਪੂਰਵਕ ਮੁਕੰਮਲ</span>
+</div>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/voice.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

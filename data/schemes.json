@@ -1,0 +1,64 @@
+{
+  "schemes": [
+    {
+      "id": "sch_midh_drip",
+      "name_en": "MIDH / PMKSY: Micro-Irrigation Drip Subsidy",
+      "name_pa": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਕ੍ਰਿਸ਼ੀ ਸਿੰਚਾਈ ਯੋਜਨਾ: ਤੁਪਕਾ ਸਿੰਚਾਈ (ਡਰਿੱਪ) ਸਬਸਿਡੀ",
+      "name_hi": "प्रधानमंत्री कृषि सिंचाई योजना: ड्रिप सिंचाई 80% सब्सिडी",
+      "governing_body": "Punjab Horticulture Dept & Govt of India",
+      "subsidy_pct": 80,
+      "max_benefit_inr": 48000,
+      "target_crops": ["Citrus (Kinnow)", "Guava", "Vegetables"],
+      "eligibility": {
+        "max_land_killa": 12.5,
+        "requires_water_source": true,
+        "tenure_allowed": ["OWNED", "LONG_LEASE"]
+      },
+      "summary_pa": "ਕਿੰਨੂ ਦੇ ਬਾਗ਼ ਵਿੱਚ ਡਰਿੱਪ ਲਗਾਉਣ 'ਤੇ 80% ਸਬਸਿਡੀ ਮਿਲਦੀ ਹੈ। ਇਸ ਨਾਲ 50% ਪਾਣੀ ਬਚਦਾ ਹੈ ਅਤੇ ਨਹਿਰੀ ਪਾਣੀ ਦੇ ਕੱਟ ਤੋਂ ਬਚਾਅ ਹੁੰਦਾ ਹੈ।",
+      "summary_hi": "किन्नू बाग में ड्रिप लगाने पर 80% सब्सिडी मिलती है। इससे 50% पानी की बचत होती है और खाद ड्रिप से दी जा सकती है।",
+      "documents_needed": ["Jamabandi (Fard)", "Aadhaar Card", "Bank Passbook", "Water Source Certificate"],
+      "last_date": "2026-11-30",
+      "verified_by": "Dept of Horticulture Punjab Notification 2026",
+      "apply_mode": "Online portal or through Block Horticulture Officer"
+    },
+    {
+      "id": "sch_pm_kusum_b",
+      "name_en": "PM-KUSUM Component-B: Standalone Solar Pump",
+      "name_pa": "ਪੀ.ਐੱਮ. ਕੁਸੁਮ: ਸੋਲਰ ਪੰਪ ਸਬਸਿਡੀ (60% ਛੋਟ)",
+      "name_hi": "पीएम कुसुम योजना: सोलर वाटर पंप (60% सब्सिडी)",
+      "governing_body": "PEDA (Punjab Energy Dev Agency) & MNRE",
+      "subsidy_pct": 60,
+      "max_benefit_inr": 115000,
+      "target_crops": ["All Crops"],
+      "eligibility": {
+        "requires_no_grid_power": true,
+        "tubewell_depth_ft": 100
+      },
+      "summary_pa": "7.5 HP ਤੱਕ ਦੇ ਸੋਲਰ ਪੰਪ 'ਤੇ 60% ਸਬਸਿਡੀ। ਬਿਜਲੀ ਦੇ ਕੱਟਾਂ ਅਤੇ ਡੀਜ਼ਲ ਦੇ ਖ਼ਰਚੇ ਤੋਂ ਮੁਕਤੀ।",
+      "summary_hi": "7.5 HP तक के सोलर वाटर पंप पर 60% तक छूट। डीजल के बढ़ते खर्च और बिजली कटौती से स्थायी समाधान।",
+      "documents_needed": ["Aadhaar Card", "Jamabandi copy", "Bank Details", "Tubewell self-declaration"],
+      "last_date": "2026-12-15",
+      "verified_by": "PEDA Solar Notification PB/2026/KUSUM",
+      "apply_mode": "PEDA Portal or CSC Kiosk"
+    },
+    {
+      "id": "sch_punjab_crop_diversification",
+      "name_en": "Punjab Crop Diversification Incentive",
+      "name_pa": "ਪੰਜਾਬ ਫ਼ਸਲੀ ਵਿਭਿੰਨਤਾ ਪ੍ਰੋਤਸਾਹਨ ਸਕੀਮ (₹7,000 ਪ੍ਰਤੀ ਏਕੜ)",
+      "name_hi": "पंजाब फसल विविधीकरण प्रोत्साहन योजना (₹7,000 प्रति एकड़)",
+      "governing_body": "Punjab Agriculture & Farmers Welfare Dept",
+      "subsidy_pct": 100,
+      "max_benefit_inr": 21000,
+      "target_crops": ["Alternative Crops (Basmati, Pulses, Kinnow)"],
+      "eligibility": {
+        "shifting_away_from_paddy": true
+      },
+      "summary_pa": "ਝੋਨੇ ਦੀ ਥਾਂ ਬਾਗ਼ਬਾਨੀ, ਮੂੰਗੀ ਜਾਂ ਮੱਕੀ ਲਗਾਉਣ ਵਾਲੇ ਕਿਸਾਨਾਂ ਨੂੰ ₹7,000 ਪ੍ਰਤੀ ਏਕੜ ਸਿੱਧੀ ਵਿੱਤੀ ਸਹਾਇਤਾ (DBT)।",
+      "summary_hi": "धान की जगह बागवानी, मूंग या दालें उगाने वाले किसानों को ₹7,000 प्रति एकड़ सीधी वित्तीय सहायता।",
+      "documents_needed": ["Khasra Girdawari verification", "Bank Account linked to Aadhaar"],
+      "last_date": "2026-10-31",
+      "verified_by": "Punjab Agriculture Directorate Notice 88/2026",
+      "apply_mode": "Through local Agriculture Development Officer (ADO)"
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+/* ==========================================================================
+   MITTI DESIGN SYSTEM - Outdoor High-Contrast Rural UI
+   Tokens: Earth #1A1C19, Surface #FBFDF7, Green #1B5E20, Amber #B26A00, Red #B71C1C
+   ========================================================================== */
+
+:root {
+  --mitti-earth-900: #1A1C19;
+  --mitti-earth-700: #3E433C;
+  --mitti-surface-50: #FBFDF7;
+  --mitti-surface-card: #FFFFFF;
+  --mitti-card-border: #72796F;
+  --mitti-green-700: #1B5E20;
+  --mitti-green-100: #E8F5E9;
+  --mitti-amber-800: #B26A00;
+  --mitti-amber-100: #FFF8E1;
+  --mitti-red-800: #B71C1C;
+  --mitti-red-100: #FFEBEE;
+  --mitti-blue-800: #0D47A1;
+  --mitti-blue-100: #E3F2FD;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Gurmukhi", "Noto Sans Devanagari", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #EFEFE9;
+  color: var(--mitti-earth-900);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: var(--mitti-surface-50);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+  border-left: 1px solid #D6D8D2;
+  border-right: 1px solid #D6D8D2;
+}
+
+/* Header */
+.app-header {
+  background-color: var(--mitti-surface-card);
+  border-bottom: 2px solid var(--mitti-card-border);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.brand-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--mitti-green-700);
+}
+
+.brand-badge {
+  font-size: 11px;
+  background: var(--mitti-green-100);
+  color: var(--mitti-green-700);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  border: 1px solid var(--mitti-green-700);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-btn {
+  background: var(--mitti-surface-50);
+  border: 1.5px solid var(--mitti-card-border);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--mitti-earth-900);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 16px;
+  padding-bottom: 96px;
+  overflow-y: auto;
+}
+
+/* Cards */
+.mitti-card {
+  background: var(--mitti-surface-card);
+  border: 1.5px solid var(--mitti-card-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.mitti-card.urgent {
+  background-color: var(--mitti-red-100);
+  border-color: var(--mitti-red-800);
+}
+
+.mitti-card.warning {
+  background-color: var(--mitti-amber-100);
+  border-color: var(--mitti-amber-800);
+}
+
+.mitti-card.safe {
+  background-color: var(--mitti-green-100);
+  border-color: var(--mitti-green-700);
+}
+
+.mitti-card.water {
+  background-color: var(--mitti-blue-100);
+  border-color: var(--mitti-blue-800);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--mitti-earth-900);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.audio-btn {
+  background: #FFFFFF;
+  border: 1.5px solid var(--mitti-earth-900);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.1s;
+}
+
+.audio-btn:active {
+  transform: scale(0.92);
+}
+
+/* Status Pills */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.status-pill.green {
+  background-color: var(--mitti-green-700);
+  color: #FFFFFF;
+}
+
+.status-pill.amber {
+  background-color: var(--mitti-amber-800);
+  color: #FFFFFF;
+}
+
+.status-pill.red {
+  background-color: var(--mitti-red-800);
+  color: #FFFFFF;
+}
+
+.status-pill.blue {
+  background-color: var(--mitti-blue-800);
+  color: #FFFFFF;
+}
+
+/* Task Checkbox Items */
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #D6D8D2;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-checkbox {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  margin-top: 2px;
+  accent-color: var(--mitti-green-700);
+  cursor: pointer;
+}
+
+.task-label {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mitti-earth-900);
+}
+
+.task-meta {
+  font-size: 12px;
+  color: var(--mitti-earth-700);
+  margin-top: 2px;
+}
+
+/* Buttons */
+.mitti-btn {
+  min-height: 52px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  border: 2px solid var(--mitti-earth-900);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 3px 0 var(--mitti-earth-900);
+  transition: all 0.1s;
+}
+
+.mitti-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--mitti-earth-900);
+}
+
+.mitti-btn.primary {
+  background-color: var(--mitti-green-700);
+  color: #FFFFFF;
+  border-color: #0E3A13;
+}
+
+.mitti-btn.secondary {
+  background-color: var(--mitti-surface-50);
+  color: var(--mitti-earth-900);
+}
+
+.mitti-btn.full-width {
+  width: 100%;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 520px;
+  background: var(--mitti-surface-card);
+  border-top: 2px solid var(--mitti-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6px 0;
+  z-index: 50;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 56px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--mitti-earth-700);
+  font-size: 11px;
+  font-weight: 700;
+  gap: 3px;
+}
+
+.nav-item.active {
+  color: var(--mitti-green-700);
+}
+
+.nav-item.active .nav-icon {
+  transform: scale(1.15);
+}
+
+/* Global Omni-Mic FAB */
+.omni-mic-fab {
+  position: fixed;
+  bottom: 66px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--mitti-green-700);
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 60;
+  transition: transform 0.15s;
+}
+
+.omni-mic-fab:active {
+  transform: translateX(-50%) scale(0.92);
+}
+
+.omni-mic-fab.listening {
+  background-color: var(--mitti-red-800);
+  animation: pulse-ring 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(183, 28, 28, 0.7); }
+  70% { box-shadow: 0 0 0 16px rgba(183, 28, 28, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(183, 28, 28, 0); }
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-sheet {
+  background: var(--mitti-surface-50);
+  width: 100%;
+  max-width: 520px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 2px solid var(--mitti-earth-900);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px 16px;
+  animation: slide-up 0.2s ease-out;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.modal-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--mitti-earth-900);
+}
+
+.close-btn {
+  background: #EFEFE9;
+  border: 1.5px solid var(--mitti-card-border);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--mitti-earth-900);
+}
+
+.form-input {
+  width: 100%;
+  min-height: 48px;
+  border: 2px solid var(--mitti-card-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #FFFFFF;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--mitti-green-700);
+}
+
+/* Interactive SVG Map & Charts */
+.svg-chart-container {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid var(--mitti-card-border);
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+/* Live Camera Video Viewfinder */
+.camera-viewfinder-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--mitti-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.camera-box-guide {
+  width: 180px;
+  height: 140px;
+  border: 2.5px dashed #00E676;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 230, 118, 0.4);
+}
+
+/* Toast Notifications */
+.toast-notification {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--mitti-earth-900);
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 200;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: none;
+  align-items: center;
+  gap: 8px;
+  animation: toast-in 0.2s ease-out;
+}
+
+.toast-notification.active {
+  display: flex;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Visual Range Slider */
+.drum-slider {
+  width: 100%;
+  height: 8px;
+  accent-color: var(--mitti-green-700);
+  cursor: pointer;
+}

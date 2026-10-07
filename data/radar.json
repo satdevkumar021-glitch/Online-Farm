@@ -1,0 +1,127 @@
+{
+  "alerts": [
+    {
+      "id": "alt_curated_1791361833794",
+      "severity": "WARNING",
+      "crop": "KINNOW_MANDARIN",
+      "stage": "FRUIT_SIZING_AND_COLOR_BREAK",
+      "title_en": "Abohar Zone: Fresh Citrus Psylla Outbreak",
+      "title_pa": "ਅਬੋਹਰ ਜ਼ੋਨ: ਸਿਟਰਸ ਸਾਈਲਾ (Citrus Psylla) ਦਾ ਤਾਜ਼ਾ ਹਮਲਾ",
+      "title_hi": "अबोहर जोन: सिट्रस साइला का ताजा प्रकोप",
+      "reported_count": 24,
+      "distance_km": 2.5,
+      "location_text": "Balluana, Fazilka",
+      "source": "Agronomist Signed Review",
+      "issued_date": "2026-10-07",
+      "is_farm_at_risk": true,
+      "risk_reason_pa": "ਤੁਹਾਡਾ ਬਾਗ਼ ਪ੍ਰਭਾਵਿਤ ਜ਼ੋਨ ਦੇ ਅੰਦਰ ਹੈ।",
+      "risk_reason_hi": "आपका बाग प्रभावित क्षेत्र में है।",
+      "actions": {
+        "cultural": "ਪੀਲੇ ਸਟਿੱਕੀ ਕਾਰਡ ਲਗਾਓ",
+        "biological": "ਮਿੱਤਰ ਕੀੜਿਆਂ ਦੀ ਰੱਖਿਆ ਕਰੋ",
+        "chemical": "ਰੌਗਰ (Rogor / Dimethoate) 200ml ਪ੍ਰਤੀ ਡਰੱਮ"
+      }
+    },
+    {
+      "id": "alt_curated_1791361818542",
+      "severity": "WARNING",
+      "crop": "KINNOW_MANDARIN",
+      "stage": "FRUIT_SIZING_AND_COLOR_BREAK",
+      "title_en": "Abohar Zone: Fresh Citrus Psylla Outbreak",
+      "title_pa": "ਅਬੋਹਰ ਜ਼ੋਨ: ਸਿਟਰਸ ਸਾਈਲਾ (Citrus Psylla) ਦਾ ਤਾਜ਼ਾ ਹਮਲਾ",
+      "title_hi": "अबोहर जोन: सिट्रस साइला का ताजा प्रकोप",
+      "reported_count": 24,
+      "distance_km": 2.5,
+      "location_text": "Balluana, Fazilka",
+      "source": "Agronomist Signed Review",
+      "issued_date": "2026-10-07",
+      "is_farm_at_risk": true,
+      "risk_reason_pa": "ਤੁਹਾਡਾ ਬਾਗ਼ ਪ੍ਰਭਾਵਿਤ ਜ਼ੋਨ ਦੇ ਅੰਦਰ ਹੈ।",
+      "risk_reason_hi": "आपका बाग प्रभावित क्षेत्र में है।",
+      "actions": {
+        "cultural": "ਪੀਲੇ ਸਟਿੱਕੀ ਕਾਰਡ ਲਗਾਓ",
+        "biological": "ਮਿੱਤਰ ਕੀੜਿਆਂ ਦੀ ਰੱਖਿਆ ਕਰੋ",
+        "chemical": "ਰੌਗਰ (Rogor / Dimethoate) 200ml ਪ੍ਰਤੀ ਡਰੱਮ"
+      }
+    },
+    {
+      "id": "alt_curated_1791361740401",
+      "severity": "WARNING",
+      "crop": "KINNOW_MANDARIN",
+      "stage": "FRUIT_SIZING_AND_COLOR_BREAK",
+      "title_en": "Abohar Zone: Fresh Citrus Psylla Outbreak",
+      "title_pa": "ਅਬੋਹਰ ਜ਼ੋਨ: ਸਿਟਰਸ ਸਾਈਲਾ (Citrus Psylla) ਦਾ ਤਾਜ਼ਾ ਹਮਲਾ",
+      "title_hi": "अबोहर जोन: सिट्रस साइला का ताजा प्रकोप",
+      "reported_count": 24,
+      "distance_km": 2.5,
+      "location_text": "Balluana, Fazilka",
+      "source": "Agronomist Signed Review",
+      "issued_date": "2026-10-07",
+      "is_farm_at_risk": true,
+      "risk_reason_pa": "ਤੁਹਾਡਾ ਬਾਗ਼ ਪ੍ਰਭਾਵਿਤ ਜ਼ੋਨ ਦੇ ਅੰਦਰ ਹੈ।",
+      "risk_reason_hi": "आपका बाग प्रभावित क्षेत्र में है।",
+      "actions": {
+        "cultural": "ਪੀਲੇ ਸਟਿੱਕੀ ਕਾਰਡ ਲਗਾਓ",
+        "biological": "ਮਿੱਤਰ ਕੀੜਿਆਂ ਦੀ ਰੱਖਿਆ ਕਰੋ",
+        "chemical": "ਰੌਗਰ (Rogor / Dimethoate) 200ml ਪ੍ਰਤੀ ਡਰੱਮ"
+      }
+    },
+    {
+      "id": "alt_pb_fazilka_01",
+      "severity": "HIGH",
+      "crop": "KINNOW_MANDARIN",
+      "stage": "FRUIT_SIZING_AND_COLOR_BREAK",
+      "title_en": "Urgent Warning: Kinnow Fruit Drop & Fruit Fly Flare-Up",
+      "title_pa": "ਜ਼ਰੂਰੀ ਚੇਤਾਵਨੀ: ਕਿੰਨੂ ਦਾ ਕੇਰਾ ਅਤੇ ਫ਼ਲ ਦੀ ਮੱਖੀ ਦਾ ਹਮਲਾ",
+      "title_hi": "चेतावनी: किन्नू फल झड़न (केरा) और फल मक्खी का प्रकोप",
+      "reported_count": 38,
+      "distance_km": 1.8,
+      "location_text": "Balluana, Khuian Sarwar, and Abohar sub-division",
+      "source": "PAU Regional Fruit Research Station, Abohar & KVK",
+      "issued_date": "2026-10-07",
+      "is_farm_at_risk": true,
+      "risk_reason_pa": "ਤੁਹਾਡਾ ਕਿੰਨੂ ਫਲ ਪੱਕਣ ਦੀ ਸਟੇਜ 'ਤੇ ਹੈ ਅਤੇ ਤਾਜ਼ਾ ਨਹਿਰੀ ਸਿੰਚਾਈ ਕਾਰਨ ਨਮੀ ਜ਼ਿਆਦਾ ਹੈ।",
+      "risk_reason_hi": "आपका बाग फल पकने की अवस्था में है और हालिया सिंचाई से नमी अनुकूल है।",
+      "actions": {
+        "cultural": "ਬਾਗ਼ ਵਿੱਚੋਂ ਡਿੱਗੇ ਹੋਏ ਕਿੰਨੂ ਰੋਜ਼ ਇਕੱਠੇ ਕਰਕੇ ਜ਼ਮੀਨ ਵਿੱਚ 2 ਫੁੱਟ ਡੂੰਘਾ ਟੋਆ ਪੁੱਟ ਕੇ ਦੱਬ ਦਿਓ।",
+        "biological": "ਪ੍ਰਤੀ ਏਕੜ 16 ਫ਼ਰੂਟ ਫ਼ਲਾਈ ਟਰੈਪ (PAU Pheromone Traps) ਟਾਹਣੀਆਂ 'ਤੇ 5 ਫੁੱਟ ਉਚਾਈ 'ਤੇ ਲਗਾਓ।",
+        "chemical": "ਜੇਕਰ ਉੱਲੀ ਵਾਲਾ ਕੇਰਾ ਵਧ ਰਿਹਾ ਹੈ, ਤਾਂ ਟਿਲਟ (Propiconazole 25 EC) 200 ml ਪ੍ਰਤੀ 200 ਲੀਟਰ ਪਾਣੀ ਵਿੱਚ ਮਿਲਾ ਕੇ ਛਿੜਕਾਅ ਕਰੋ। PHI: 30 ਦਿਨ।"
+      }
+    }
+  ],
+  "mandi_prices": [
+    {
+      "market_id": "mandi_abohar",
+      "market_name": "Abohar APMC (ਅਬੋਹਰ ਮੰਡੀ)",
+      "commodity": "Kinnow (ਕਿੰਨੂ)",
+      "date": "2026-10-07",
+      "grade_a_waxed": "₹32.00 - ₹34.50 / kg",
+      "grade_b_field": "₹21.00 - ₹24.00 / kg",
+      "modal_price_qtl": 3300,
+      "trend": "RISING",
+      "trend_pct": "+4.5%"
+    },
+    {
+      "market_id": "mandi_ganganagar",
+      "market_name": "Sri Ganganagar APMC (32 km)",
+      "commodity": "Kinnow (ਕਿੰਨੂ)",
+      "date": "2026-10-07",
+      "grade_a_waxed": "₹35.00 - ₹36.20 / kg",
+      "grade_b_field": "₹22.50 - ₹25.00 / kg",
+      "modal_price_qtl": 3550,
+      "trend": "RISING",
+      "trend_pct": "+6.0%"
+    },
+    {
+      "market_id": "mandi_abohar_cotton",
+      "market_name": "Abohar APMC (ਅਬੋਹਰ ਮੰਡੀ)",
+      "commodity": "Narma Cotton (ਨਰਮਾ)",
+      "date": "2026-10-07",
+      "grade_a_waxed": "₹6,850 / Quintal",
+      "grade_b_field": "₹6,400 / Quintal",
+      "modal_price_qtl": 6850,
+      "trend": "STABLE",
+      "trend_pct": "0.0%"
+    }
+  ]
+}
