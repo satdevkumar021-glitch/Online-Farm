@@ -1,6 +1,28 @@
 {
   "alerts": [
     {
+      "id": "alt_curated_1791364845206",
+      "severity": "WARNING",
+      "crop": "KINNOW_MANDARIN",
+      "stage": "FRUIT_SIZING_AND_COLOR_BREAK",
+      "title_en": "Abohar Zone: Fresh Citrus Psylla Outbreak",
+      "title_pa": "ਅਬੋਹਰ ਜ਼ੋਨ: ਸਿਟਰਸ ਸਾਈਲਾ (Citrus Psylla) ਦਾ ਤਾਜ਼ਾ ਹਮਲਾ",
+      "title_hi": "अबोहर जोन: सिट्रस साइला का ताजा प्रकोप",
+      "reported_count": 24,
+      "distance_km": 2.5,
+      "location_text": "Balluana, Fazilka",
+      "source": "Agronomist Signed Review",
+      "issued_date": "2026-10-07",
+      "is_farm_at_risk": true,
+      "risk_reason_pa": "ਤੁਹਾਡਾ ਬਾਗ਼ ਪ੍ਰਭਾਵਿਤ ਜ਼ੋਨ ਦੇ ਅੰਦਰ ਹੈ।",
+      "risk_reason_hi": "आपका बाग प्रभावित क्षेत्र में है।",
+      "actions": {
+        "cultural": "ਪੀਲੇ ਸਟਿੱਕੀ ਕਾਰਡ ਲਗਾਓ",
+        "biological": "ਮਿੱਤਰ ਕੀੜਿਆਂ ਦੀ ਰੱਖਿਆ ਕਰੋ",
+        "chemical": "ਰੌਗਰ (Rogor / Dimethoate) 200ml ਪ੍ਰਤੀ ਡਰੱਮ"
+      }
+    },
+    {
       "id": "alt_curated_1791361833794",
       "severity": "WARNING",
       "crop": "KINNOW_MANDARIN",

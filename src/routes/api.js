@@ -42,9 +42,9 @@ router.post('/auth/otp/verify', (req, res) => {
     return res.status(400).json({ success: false, error: 'Please provide OTP' });
   }
 
-  // Check OTP
+  const otpStr = String(otp || '').trim();
   const record = activeOtps.get(cleanPhone);
-  const isValid = otp === '4921' || (record && record.otp === otp && Date.now() < record.expiresAt);
+  const isValid = otpStr === '4921' || (record && record.otp === otpStr && Date.now() < record.expiresAt);
 
   if (!isValid) {
     return res.status(401).json({ success: false, error: 'Invalid or expired OTP. Please try again with 4921.' });
@@ -385,7 +385,7 @@ router.post('/market/ledger/entry', (req, res) => {
     type: type || 'EXPENSE',
     category: category || 'GENERAL',
     description: description || 'Field operation',
-    amount_inr: parseFloat(amount_inr) || 0,
+    amount_inr: Math.max(0, parseFloat(amount_inr) || 0),
     date: date || new Date().toISOString().split('T')[0]
   };
 
@@ -449,7 +449,7 @@ router.post('/farms/plots/create', (req, res) => {
   const store = db.getStore();
   if (!store.plots) store.plots = [];
 
-  const killa = parseFloat(area_killa) || 1.0;
+  const killa = Math.max(0.1, parseFloat(area_killa) || 1.0);
   const newPlot = {
     id: `plot_${Date.now()}`,
     farmer_id: store.farmers && store.farmers[0] ? store.farmers[0].id : "f_harpreet_01",

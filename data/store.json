@@ -2,7 +2,7 @@
   "farmers": [
     {
       "id": "f_1791353830833",
-      "name": "Surjit Kumar (ਕ੍ਰਿਸ਼ੀ ਮਿੱਤਰ)",
+      "name": "ਹਰਪ੍ਰੀਤ ਸਿੰਘ (Harpreet Singh)",
       "phone": "+917508608223",
       "village": "Balluana",
       "block": "Abohar",
@@ -122,9 +122,124 @@
       "days_to_next": 45,
       "active_phi_lock": null,
       "created_at": "2026-10-07T08:30:33.790Z"
+    },
+    {
+      "id": "plot_1791364845200",
+      "farmer_id": "f_1791353830833",
+      "name": "ਧਾਣੀ ਵਾਲਾ ਨਵਾਂ ਬਾਗ਼ (Test Plot)",
+      "area_killa": 2,
+      "area_kanals": 16,
+      "crop": "KINNOW_MANDARIN",
+      "variety": "Kinnow",
+      "rootstock": "Jatti Khatti",
+      "planting_year": 2024,
+      "tree_count": 220,
+      "soil_type": "Sandy Loam",
+      "soil_ph": 7.6,
+      "organic_carbon_pct": 0.42,
+      "water_tds_ppm": 1200,
+      "irrigation_source": "Canal + Tubewell",
+      "tenure_type": "OWNED",
+      "current_stage": "ESTABLISHMENT_STAGE",
+      "stage_days": 12,
+      "next_stage": "FLOWERING_FLUSH",
+      "days_to_next": 45,
+      "active_phi_lock": null,
+      "created_at": "2026-10-07T09:20:45.200Z"
     }
   ],
   "activities": [
+    {
+      "id": "act_1791364845202",
+      "plot_id": "plot_01_kinnow",
+      "activity_type": "SPRAY",
+      "details": "ਟਿਲਟ 25 EC ਫ਼ੌਲੀਅਰ ਸਪਰੇਅ",
+      "quantity": 2,
+      "unit": "DRUM_200L",
+      "cost_inr": 960,
+      "date": "2026-10-07T09:20:45.202Z",
+      "weather_snapshot": "Temp 28.5C, Wind 7km/h",
+      "phi_days": 30,
+      "outcome_feedback": null
+    },
+    {
+      "id": "act_1791364845187",
+      "plot_id": "plot_01_kinnow",
+      "activity_type": "FERTILIZER",
+      "details": "ਜ਼ਿੰਕ ਸਲਫੇਟ ਤੇ ਚੂਨਾ ਛਿੜਕਾਅ",
+      "quantity": 1,
+      "unit": "DRUM_200L",
+      "cost_inr": 520,
+      "date": "2026-10-07T09:20:45.187Z",
+      "weather_snapshot": "Temp 28.5C, Wind 7km/h",
+      "phi_days": 0,
+      "outcome_feedback": null
+    },
+    {
+      "id": "act_1791364845185",
+      "plot_id": "plot_01_kinnow",
+      "activity_type": "SPRAY",
+      "details": "Field spray recorded",
+      "quantity": 1,
+      "unit": "DRUM_200L",
+      "cost_inr": 0,
+      "date": "2026-10-07T09:20:45.185Z",
+      "weather_snapshot": "Temp 28.5C, Wind 7km/h",
+      "phi_days": 30,
+      "outcome_feedback": null
+    },
+    {
+      "id": "act_1791364833170",
+      "plot_id": "plot_01_kinnow",
+      "activity_type": "FERTILIZER",
+      "details": "ਜ਼ਿੰਕ ਸਲਫੇਟ ਤੇ ਚੂਨਾ ਛਿੜਕਾਅ",
+      "quantity": 1,
+      "unit": "DRUM_200L",
+      "cost_inr": 520,
+      "date": "2026-10-07T09:20:33.170Z",
+      "weather_snapshot": "Temp 28.5C, Wind 7km/h",
+      "phi_days": 0,
+      "outcome_feedback": null
+    },
+    {
+      "id": "act_1791364833169",
+      "plot_id": "plot_01_kinnow",
+      "activity_type": "SPRAY",
+      "details": "Field spray recorded",
+      "quantity": 1,
+      "unit": "DRUM_200L",
+      "cost_inr": 0,
+      "date": "2026-10-07T09:20:33.169Z",
+      "weather_snapshot": "Temp 28.5C, Wind 7km/h",
+      "phi_days": 30,
+      "outcome_feedback": null
+    },
+    {
+      "id": "act_1791364753312",
+      "plot_id": "plot_01_kinnow",
+      "activity_type": "FERTILIZER",
+      "details": "ਜ਼ਿੰਕ ਸਲਫੇਟ ਤੇ ਚੂਨਾ ਛਿੜਕਾਅ",
+      "quantity": 1,
+      "unit": "DRUM_200L",
+      "cost_inr": 520,
+      "date": "2026-10-07T09:19:13.312Z",
+      "weather_snapshot": "Temp 28.5C, Wind 7km/h",
+      "phi_days": 0,
+      "outcome_feedback": null
+    },
+    {
+      "id": "act_1791364753310",
+      "plot_id": "plot_01_kinnow",
+      "activity_type": "SPRAY",
+      "details": "Field spray recorded",
+      "quantity": 1,
+      "unit": "DRUM_200L",
+      "cost_inr": 0,
+      "date": "2026-10-07T09:19:13.310Z",
+      "weather_snapshot": "Temp 28.5C, Wind 7km/h",
+      "phi_days": 30,
+      "outcome_feedback": null
+    },
     {
       "id": "act_1791361833791",
       "plot_id": "plot_01_kinnow",
@@ -217,6 +332,78 @@
   ],
   "ledger": [
     {
+      "id": "led_1791364845203",
+      "plot_id": "plot_01_kinnow",
+      "type": "INCOME",
+      "category": "HARVEST_SALE",
+      "description": "ਅਬੋਹਰ ਮੰਡੀ ਕਿੰਨੂ ਗ੍ਰੇਡ-ਏ ਤੁੜਾਈ ਵਿਕਰੀ",
+      "amount_inr": 50000,
+      "date": "2026-10-07"
+    },
+    {
+      "id": "led_1791364845202",
+      "plot_id": "plot_01_kinnow",
+      "type": "EXPENSE",
+      "category": "SPRAY",
+      "description": "ਟਿਲਟ 25 EC ਫ਼ੌਲੀਅਰ ਸਪਰੇਅ",
+      "amount_inr": 960,
+      "date": "2026-10-07"
+    },
+    {
+      "id": "led_1791364845188",
+      "plot_id": "plot_01_kinnow",
+      "type": "EXPENSE",
+      "category": "GENERAL",
+      "description": "Negative test",
+      "amount_inr": 0,
+      "date": "2026-10-07"
+    },
+    {
+      "id": "led_1791364845187",
+      "plot_id": "plot_01_kinnow",
+      "type": "EXPENSE",
+      "category": "FERTILIZER",
+      "description": "ਜ਼ਿੰਕ ਸਲਫੇਟ ਤੇ ਚੂਨਾ ਛਿੜਕਾਅ",
+      "amount_inr": 520,
+      "date": "2026-10-07"
+    },
+    {
+      "id": "led_1791364833171",
+      "plot_id": "plot_01_kinnow",
+      "type": "EXPENSE",
+      "category": "GENERAL",
+      "description": "Negative test",
+      "amount_inr": 0,
+      "date": "2026-10-07"
+    },
+    {
+      "id": "led_1791364833170",
+      "plot_id": "plot_01_kinnow",
+      "type": "EXPENSE",
+      "category": "FERTILIZER",
+      "description": "ਜ਼ਿੰਕ ਸਲਫੇਟ ਤੇ ਚੂਨਾ ਛਿੜਕਾਅ",
+      "amount_inr": 520,
+      "date": "2026-10-07"
+    },
+    {
+      "id": "led_1791364753313",
+      "plot_id": "plot_01_kinnow",
+      "type": "EXPENSE",
+      "category": "GENERAL",
+      "description": "Negative test",
+      "amount_inr": 0,
+      "date": "2026-10-07"
+    },
+    {
+      "id": "led_1791364753312",
+      "plot_id": "plot_01_kinnow",
+      "type": "EXPENSE",
+      "category": "FERTILIZER",
+      "description": "ਜ਼ਿੰਕ ਸਲਫੇਟ ਤੇ ਚੂਨਾ ਛਿੜਕਾਅ",
+      "amount_inr": 520,
+      "date": "2026-10-07"
+    },
+    {
       "id": "led_1791361833792",
       "plot_id": "plot_01_kinnow",
       "type": "INCOME",
@@ -299,6 +486,378 @@
     }
   ],
   "diagnoses": [
+    {
+      "case_id": "diag_1791364845204",
+      "plot_id": "plot_01_kinnow",
+      "photo_count": 2,
+      "processed_at": "2026-10-07T09:20:45.204Z",
+      "primary_diagnosis": {
+        "name_en": "Citrus Fruit Fly Attack & Secondary Rot",
+        "name_pa": "ਫ਼ਲ ਦੀ ਮੱਖੀ ਦਾ ਹਮਲਾ ਅਤੇ ਕਿੰਨੂ ਦਾ ਕੇਰਾ",
+        "name_hi": "फल मक्खी का हमला एवं किन्नू फल झड़न",
+        "scientific_name": "Bactrocera dorsalis (Hendel)",
+        "confidence": 0.88,
+        "symptoms_confirmed": [
+          "Tiny puncture hole on lower fruit surface with water-soaked yellow halo",
+          "Premature fruit yellowing and dropping around basin",
+          "Soft rot inside dropped fruit upon splitting"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Desi / Cultural Sanitation (Zero / Low Cost)",
+            "cost_inr": 50,
+            "steps": [
+              "Collect all dropped fruit from tree basins every 2 days.",
+              "Bury collected fruit in a 2-foot deep pit with lime powder. Do NOT throw in canal or manure pit."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Biological / IPM Control",
+            "cost_inr": 220,
+            "steps": [
+              "Install 16 PAU Fruit Fly Traps (Methyl Eugenol lure) per acre.",
+              "Hang traps at 5 feet height inside shaded tree canopy facing east."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "Official PAU Chemical Recommendation",
+            "cost_inr": 580,
+            "steps": [
+              "Spray Decamethrin 2.8 EC @ 200 ml in 200 Litres water per acre OR",
+              "Spray Bait: Malathion 50 EC @ 400 ml + 2 kg Jaggery (Gur) dissolved in 200 Litres water.",
+              "Pre-Harvest Interval (PHI): 7 Days. Cease spray 1 week before fruit picking."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. P. K. Arora (Senior Entomologist)",
+          "institution": "KVK Abohar / PAU Fruit Research Station",
+          "phone": "+911634222450"
+        }
+      },
+      "secondary_candidate": {
+        "name_en": "Anthracnose / Pathological Fruit Drop",
+        "name_pa": "ਉੱਲੀ ਰੋਗ ਕਾਰਨ ਫਲ ਕੇਰਾ (ਕੋਲੇਟੋਟ੍ਰਾਈਕਮ)",
+        "name_hi": "एंथ्रेक्नोज फफूंद जनित फल सड़न",
+        "scientific_name": "Colletotrichum gloeosporioides",
+        "confidence": 0.82,
+        "symptoms_confirmed": [
+          "Dark brown or black necrotic ring around button (fruit calyx)",
+          "Fruit drops leaving stalk attached to twig",
+          "Twig dieback in upper canopy"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Pruning & Sunlight Sanitation",
+            "cost_inr": 200,
+            "steps": [
+              "Prune dried and infected twigs 2 inches below infection zone.",
+              "Avoid excessive water ponding around root collar."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Bio-Protection",
+            "cost_inr": 350,
+            "steps": [
+              "Soil application of Trichoderma viride enriched with well-rotted FYM."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "PAU Approved Systemic Fungicide",
+            "cost_inr": 640,
+            "steps": [
+              "Spray Propiconazole 25 EC (Tilt) @ 200 ml in 200 Litres water drum per acre.",
+              "PHI Lock: 30 Days before harvest."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. Balwinder Singh (Horticulture Officer)",
+          "institution": "Dept of Horticulture, Abohar",
+          "phone": "+919814233211"
+        }
+      },
+      "requires_human_triage": false
+    },
+    {
+      "case_id": "diag_1791364845188",
+      "plot_id": "plot_01_kinnow",
+      "photo_count": 3,
+      "processed_at": "2026-10-07T09:20:45.188Z",
+      "primary_diagnosis": {
+        "name_en": "Citrus Fruit Fly Attack & Secondary Rot",
+        "name_pa": "ਫ਼ਲ ਦੀ ਮੱਖੀ ਦਾ ਹਮਲਾ ਅਤੇ ਕਿੰਨੂ ਦਾ ਕੇਰਾ",
+        "name_hi": "फल मक्खी का हमला एवं किन्नू फल झड़न",
+        "scientific_name": "Bactrocera dorsalis (Hendel)",
+        "confidence": 0.88,
+        "symptoms_confirmed": [
+          "Tiny puncture hole on lower fruit surface with water-soaked yellow halo",
+          "Premature fruit yellowing and dropping around basin",
+          "Soft rot inside dropped fruit upon splitting"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Desi / Cultural Sanitation (Zero / Low Cost)",
+            "cost_inr": 50,
+            "steps": [
+              "Collect all dropped fruit from tree basins every 2 days.",
+              "Bury collected fruit in a 2-foot deep pit with lime powder. Do NOT throw in canal or manure pit."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Biological / IPM Control",
+            "cost_inr": 220,
+            "steps": [
+              "Install 16 PAU Fruit Fly Traps (Methyl Eugenol lure) per acre.",
+              "Hang traps at 5 feet height inside shaded tree canopy facing east."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "Official PAU Chemical Recommendation",
+            "cost_inr": 580,
+            "steps": [
+              "Spray Decamethrin 2.8 EC @ 200 ml in 200 Litres water per acre OR",
+              "Spray Bait: Malathion 50 EC @ 400 ml + 2 kg Jaggery (Gur) dissolved in 200 Litres water.",
+              "Pre-Harvest Interval (PHI): 7 Days. Cease spray 1 week before fruit picking."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. P. K. Arora (Senior Entomologist)",
+          "institution": "KVK Abohar / PAU Fruit Research Station",
+          "phone": "+911634222450"
+        }
+      },
+      "secondary_candidate": {
+        "name_en": "Anthracnose / Pathological Fruit Drop",
+        "name_pa": "ਉੱਲੀ ਰੋਗ ਕਾਰਨ ਫਲ ਕੇਰਾ (ਕੋਲੇਟੋਟ੍ਰਾਈਕਮ)",
+        "name_hi": "एंथ्रेक्नोज फफूंद जनित फल सड़न",
+        "scientific_name": "Colletotrichum gloeosporioides",
+        "confidence": 0.82,
+        "symptoms_confirmed": [
+          "Dark brown or black necrotic ring around button (fruit calyx)",
+          "Fruit drops leaving stalk attached to twig",
+          "Twig dieback in upper canopy"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Pruning & Sunlight Sanitation",
+            "cost_inr": 200,
+            "steps": [
+              "Prune dried and infected twigs 2 inches below infection zone.",
+              "Avoid excessive water ponding around root collar."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Bio-Protection",
+            "cost_inr": 350,
+            "steps": [
+              "Soil application of Trichoderma viride enriched with well-rotted FYM."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "PAU Approved Systemic Fungicide",
+            "cost_inr": 640,
+            "steps": [
+              "Spray Propiconazole 25 EC (Tilt) @ 200 ml in 200 Litres water drum per acre.",
+              "PHI Lock: 30 Days before harvest."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. Balwinder Singh (Horticulture Officer)",
+          "institution": "Dept of Horticulture, Abohar",
+          "phone": "+919814233211"
+        }
+      },
+      "requires_human_triage": false
+    },
+    {
+      "case_id": "diag_1791364833171",
+      "plot_id": "plot_01_kinnow",
+      "photo_count": 3,
+      "processed_at": "2026-10-07T09:20:33.171Z",
+      "primary_diagnosis": {
+        "name_en": "Citrus Fruit Fly Attack & Secondary Rot",
+        "name_pa": "ਫ਼ਲ ਦੀ ਮੱਖੀ ਦਾ ਹਮਲਾ ਅਤੇ ਕਿੰਨੂ ਦਾ ਕੇਰਾ",
+        "name_hi": "फल मक्खी का हमला एवं किन्नू फल झड़न",
+        "scientific_name": "Bactrocera dorsalis (Hendel)",
+        "confidence": 0.88,
+        "symptoms_confirmed": [
+          "Tiny puncture hole on lower fruit surface with water-soaked yellow halo",
+          "Premature fruit yellowing and dropping around basin",
+          "Soft rot inside dropped fruit upon splitting"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Desi / Cultural Sanitation (Zero / Low Cost)",
+            "cost_inr": 50,
+            "steps": [
+              "Collect all dropped fruit from tree basins every 2 days.",
+              "Bury collected fruit in a 2-foot deep pit with lime powder. Do NOT throw in canal or manure pit."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Biological / IPM Control",
+            "cost_inr": 220,
+            "steps": [
+              "Install 16 PAU Fruit Fly Traps (Methyl Eugenol lure) per acre.",
+              "Hang traps at 5 feet height inside shaded tree canopy facing east."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "Official PAU Chemical Recommendation",
+            "cost_inr": 580,
+            "steps": [
+              "Spray Decamethrin 2.8 EC @ 200 ml in 200 Litres water per acre OR",
+              "Spray Bait: Malathion 50 EC @ 400 ml + 2 kg Jaggery (Gur) dissolved in 200 Litres water.",
+              "Pre-Harvest Interval (PHI): 7 Days. Cease spray 1 week before fruit picking."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. P. K. Arora (Senior Entomologist)",
+          "institution": "KVK Abohar / PAU Fruit Research Station",
+          "phone": "+911634222450"
+        }
+      },
+      "secondary_candidate": {
+        "name_en": "Anthracnose / Pathological Fruit Drop",
+        "name_pa": "ਉੱਲੀ ਰੋਗ ਕਾਰਨ ਫਲ ਕੇਰਾ (ਕੋਲੇਟੋਟ੍ਰਾਈਕਮ)",
+        "name_hi": "एंथ्रेक्नोज फफूंद जनित फल सड़न",
+        "scientific_name": "Colletotrichum gloeosporioides",
+        "confidence": 0.82,
+        "symptoms_confirmed": [
+          "Dark brown or black necrotic ring around button (fruit calyx)",
+          "Fruit drops leaving stalk attached to twig",
+          "Twig dieback in upper canopy"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Pruning & Sunlight Sanitation",
+            "cost_inr": 200,
+            "steps": [
+              "Prune dried and infected twigs 2 inches below infection zone.",
+              "Avoid excessive water ponding around root collar."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Bio-Protection",
+            "cost_inr": 350,
+            "steps": [
+              "Soil application of Trichoderma viride enriched with well-rotted FYM."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "PAU Approved Systemic Fungicide",
+            "cost_inr": 640,
+            "steps": [
+              "Spray Propiconazole 25 EC (Tilt) @ 200 ml in 200 Litres water drum per acre.",
+              "PHI Lock: 30 Days before harvest."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. Balwinder Singh (Horticulture Officer)",
+          "institution": "Dept of Horticulture, Abohar",
+          "phone": "+919814233211"
+        }
+      },
+      "requires_human_triage": false
+    },
+    {
+      "case_id": "diag_1791364753313",
+      "plot_id": "plot_01_kinnow",
+      "photo_count": 3,
+      "processed_at": "2026-10-07T09:19:13.313Z",
+      "primary_diagnosis": {
+        "name_en": "Citrus Fruit Fly Attack & Secondary Rot",
+        "name_pa": "ਫ਼ਲ ਦੀ ਮੱਖੀ ਦਾ ਹਮਲਾ ਅਤੇ ਕਿੰਨੂ ਦਾ ਕੇਰਾ",
+        "name_hi": "फल मक्खी का हमला एवं किन्नू फल झड़न",
+        "scientific_name": "Bactrocera dorsalis (Hendel)",
+        "confidence": 0.88,
+        "symptoms_confirmed": [
+          "Tiny puncture hole on lower fruit surface with water-soaked yellow halo",
+          "Premature fruit yellowing and dropping around basin",
+          "Soft rot inside dropped fruit upon splitting"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Desi / Cultural Sanitation (Zero / Low Cost)",
+            "cost_inr": 50,
+            "steps": [
+              "Collect all dropped fruit from tree basins every 2 days.",
+              "Bury collected fruit in a 2-foot deep pit with lime powder. Do NOT throw in canal or manure pit."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Biological / IPM Control",
+            "cost_inr": 220,
+            "steps": [
+              "Install 16 PAU Fruit Fly Traps (Methyl Eugenol lure) per acre.",
+              "Hang traps at 5 feet height inside shaded tree canopy facing east."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "Official PAU Chemical Recommendation",
+            "cost_inr": 580,
+            "steps": [
+              "Spray Decamethrin 2.8 EC @ 200 ml in 200 Litres water per acre OR",
+              "Spray Bait: Malathion 50 EC @ 400 ml + 2 kg Jaggery (Gur) dissolved in 200 Litres water.",
+              "Pre-Harvest Interval (PHI): 7 Days. Cease spray 1 week before fruit picking."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. P. K. Arora (Senior Entomologist)",
+          "institution": "KVK Abohar / PAU Fruit Research Station",
+          "phone": "+911634222450"
+        }
+      },
+      "secondary_candidate": {
+        "name_en": "Anthracnose / Pathological Fruit Drop",
+        "name_pa": "ਉੱਲੀ ਰੋਗ ਕਾਰਨ ਫਲ ਕੇਰਾ (ਕੋਲੇਟੋਟ੍ਰਾਈਕਮ)",
+        "name_hi": "एंथ्रेक्नोज फफूंद जनित फल सड़न",
+        "scientific_name": "Colletotrichum gloeosporioides",
+        "confidence": 0.82,
+        "symptoms_confirmed": [
+          "Dark brown or black necrotic ring around button (fruit calyx)",
+          "Fruit drops leaving stalk attached to twig",
+          "Twig dieback in upper canopy"
+        ],
+        "actions": {
+          "track_1_cultural": {
+            "title": "Pruning & Sunlight Sanitation",
+            "cost_inr": 200,
+            "steps": [
+              "Prune dried and infected twigs 2 inches below infection zone.",
+              "Avoid excessive water ponding around root collar."
+            ]
+          },
+          "track_2_biological": {
+            "title": "Bio-Protection",
+            "cost_inr": 350,
+            "steps": [
+              "Soil application of Trichoderma viride enriched with well-rotted FYM."
+            ]
+          },
+          "track_3_chemical": {
+            "title": "PAU Approved Systemic Fungicide",
+            "cost_inr": 640,
+            "steps": [
+              "Spray Propiconazole 25 EC (Tilt) @ 200 ml in 200 Litres water drum per acre.",
+              "PHI Lock: 30 Days before harvest."
+            ]
+          }
+        },
+        "escalation": {
+          "expert_name": "Dr. Balwinder Singh (Horticulture Officer)",
+          "institution": "Dept of Horticulture, Abohar",
+          "phone": "+919814233211"
+        }
+      },
+      "requires_human_triage": false
+    },
     {
       "case_id": "diag_1791361833793",
       "plot_id": "plot_01_kinnow",
@@ -673,9 +1232,74 @@
     }
   ],
   "completed_tasks": {
-    "task_01": false
+    "task_01": false,
+    "task_02": false
   },
   "scheme_applications": [
+    {
+      "id": "app_1791364845205",
+      "scheme_id": "sch_midh_drip",
+      "applicant_name": "Harpreet Singh",
+      "applicant_phone": "+919876543210",
+      "land_size_killa": 3,
+      "status": "SUBMITTED_FOR_VERIFICATION",
+      "status_label_pa": "ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਹੋ ਗਈ (ਪੜਤਾਲ ਅਧੀਨ)",
+      "assigned_officer": "Dr. Balwinder Singh Brar (HDO Abohar)",
+      "documents_ready": [
+        "Jamabandi",
+        "Aadhaar",
+        "Passbook"
+      ],
+      "applied_at": "2026-10-07T09:20:45.205Z"
+    },
+    {
+      "id": "app_1791364845189",
+      "scheme_id": "sch_pm_kusum_b",
+      "applicant_name": "Harpreet Singh",
+      "applicant_phone": "+919876543210",
+      "land_size_killa": 3,
+      "status": "SUBMITTED_FOR_VERIFICATION",
+      "status_label_pa": "ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਹੋ ਗਈ (ਪੜਤਾਲ ਅਧੀਨ)",
+      "assigned_officer": "Dr. Balwinder Singh Brar (HDO Abohar)",
+      "documents_ready": [
+        "Jamabandi",
+        "Aadhaar",
+        "Passbook"
+      ],
+      "applied_at": "2026-10-07T09:20:45.189Z"
+    },
+    {
+      "id": "app_1791364833171",
+      "scheme_id": "sch_pm_kusum_b",
+      "applicant_name": "Harpreet Singh",
+      "applicant_phone": "+919876543210",
+      "land_size_killa": 3,
+      "status": "SUBMITTED_FOR_VERIFICATION",
+      "status_label_pa": "ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਹੋ ਗਈ (ਪੜਤਾਲ ਅਧੀਨ)",
+      "assigned_officer": "Dr. Balwinder Singh Brar (HDO Abohar)",
+      "documents_ready": [
+        "Jamabandi",
+        "Aadhaar",
+        "Passbook"
+      ],
+      "applied_at": "2026-10-07T09:20:33.171Z"
+    },
+    {
+      "id": "app_1791364753314",
+      "scheme_id": "sch_pm_kusum_b",
+      "applicant_name": "Harpreet Singh",
+      "applicant_phone": "+919876543210",
+      "land_size_killa": 3,
+      "status": "SUBMITTED_FOR_VERIFICATION",
+      "status_label_pa": "ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਹੋ ਗਈ (ਪੜਤਾਲ ਅਧੀਨ)",
+      "assigned_officer": "Dr. Balwinder Singh Brar (HDO Abohar)",
+      "documents_ready": [
+        "Jamabandi",
+        "Aadhaar",
+        "Passbook"
+      ],
+      "applied_at": "2026-10-07T09:19:13.314Z"
+    },
     {
       "id": "app_1791361833793",
       "scheme_id": "sch_midh_drip",
